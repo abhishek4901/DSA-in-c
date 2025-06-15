@@ -1,7 +1,13 @@
 #include<stdio.h>
+ #define MAX 100
 int main (){
-    int arr[100]={0,1,1,1,0,0,1,1},size,i,j,temp;
-    size=8;
+    int arr[MAX],size,i,j,temp;
+    printf("Enter the size of the array: ");
+    scanf("%d",&size);
+    printf("Enter the elements of the array : ");
+    for(i=0;i<size;i++){ 
+        scanf("%d",&arr[i]);
+        }
     printf("Before sorting: "); 
     for(i=0;i<size;i++)    
         printf("%d ",arr[i]);
@@ -18,15 +24,6 @@ int main (){
     for(i=0;i<size;i++)
         printf("%d ",arr[i]);
     printf("\n");
-    for(i=0;i<size;i++){
-        if(arr[i]==0){
-            arr[i]=1;
-        }
-    }
-    for(i=0;i<size;i++){
-        if(arr[i]==1){
-            arr[i]=0;
-        }
-    }    
+      
     return 0;
 }
