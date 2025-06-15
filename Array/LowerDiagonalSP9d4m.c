@@ -2,8 +2,6 @@
 
 int main() {
     int i, j, n, m, count = 0;
-
-    // Input the number of rows and columns
     printf("Enter the number of rows and columns: ");
     scanf("%d%d", &n, &m);
 
@@ -32,8 +30,6 @@ int main() {
                 if (i<j && mat[i][j]!=0){
                     count++;
                 }
-        
-                
             }
         }
 
@@ -43,7 +39,7 @@ int main() {
             printf("Matrix is Not Lower Diagonal\n");
         }
     } else {
-        printf("Matrix must be square to check for lower Diagonal.\n");
+        printf("Matrix must be square to check for lower Diagonal(row = column).\n");
     }
 
     return 0;

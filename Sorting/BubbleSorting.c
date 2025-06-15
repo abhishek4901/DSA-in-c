@@ -12,13 +12,10 @@ int main()
         scanf("%d", &arr[i]);
     }
 
-    // Bubblle sorting
-    for (i = 0; i < n - 2; i++)
-    {
-        for (j = 0; j < n - i - 1; j++)
-        {
-            if (arr[j] > arr[j + 1])
-            {
+    // Bubble sorting
+    for (i = 0; i < n - 2; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
                 temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
