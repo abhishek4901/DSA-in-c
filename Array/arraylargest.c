@@ -1,37 +1,24 @@
 #include<stdio.h>
-#define MAX 100
-void minvalue(int a[], int n)
-{
-    int i, min;
-    min = a[0];
-    for(i = 1; i < n; i++)
-    {
-        if(a[i] < min)
-            min = a[i];
+ #define MAX 100
+int main (){
+    int arr[MAX],size,i,j,temp;
+    printf("Enter the size of the array: ");
+    scanf("%d",&size);
+    printf("Enter the elements of the array : ");
+    for(i=0;i<size;i++){ 
+        scanf("%d",&arr[i]);
+        }
+    for(i=0;i<size;i++){
+        for(j=i+1;j<size;j++){
+            if(arr[i]>arr[j]){ 
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
     }
-    printf("Minimum value is: %d\n", min);}
-    void maxvalue(int a[], int n)
-{
-    int i, max;
-    max = a[0];
-    for(i = 1; i < n; i++)
-    {
-        if(a[i] > max)
-            max = a[i];
-    }
-    printf("Maximum value is: %d\n", max);}
- int main()
- {
-    int a[MAX],n, i;
-    printf("Enter numbers: of array ");
-    scanf("%d", &n);
-    printf("Enter arrays value:\n" );
-    for(i = 0; i < n; i++)
-    {
-        scanf("%d", &a[i]);
-    }
-   
-    minvalue(a, n);
-    maxvalue(a, n);
+    printf("\nLargest element in the array: %d", arr[size-1]);
+    printf("\nSmallest element in the array: %d\n", arr[0]);
+
     return 0;
- }
+}
