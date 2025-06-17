@@ -97,6 +97,11 @@ int choice, status, no;
         }
     }
         int pop(){
-            itn 
+            int status;
+            status = underflow();
+            if(status == 0)
+                return 0;
+            else
+                return 1;
            
         }
