@@ -11,7 +11,6 @@ int main()
         printf("Enter the value %d: ", i + 1);
         scanf("%d", &arr[i]);
     }
-
     // Bubble sorting
     for (i = 0; i < n - 2; i++) {
         for (j = 0; j < n - i - 1; j++) {
@@ -22,7 +21,6 @@ int main()
             }
         }
     }
-
     printf(" After Sorted array:\n");
     for (i = 0; i < n; i++)
     {

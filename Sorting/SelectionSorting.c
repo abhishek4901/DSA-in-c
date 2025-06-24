@@ -1,6 +1,4 @@
 #include <stdio.h>
-#define Max 100
-
 void SelectionSorting(int arr[], int n) {
     int i, j, min_idx, temp;
     for (i = 0; i < n - 1; i++) {
@@ -24,10 +22,10 @@ void SelectionSorting(int arr[], int n) {
 }
 
 int main() {
-    int arr[Max];
     int n, i;
     printf("Enter the number of elements you want to sort: ");
     scanf("%d", &n);
+    int arr[n];
     printf("Enter the values: ");
     for (i = 0; i < n; i++) {
         scanf("%d", &arr[i]);

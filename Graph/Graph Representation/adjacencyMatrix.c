@@ -3,11 +3,11 @@
 int main() {
     int n, i, j;
 
-    // Input number of vertices
+    // Input number of vertices 
     printf("Enter the number of vertices: ");
     scanf("%d", &n);
 
-    // Declare adjacency matrix
+    // Declare adjacency matrix 
     int adjMatrix[n][n];
 
     // Fill the matrix
