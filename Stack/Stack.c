@@ -28,7 +28,7 @@ int choice, status, no;
             }
             else
             {
-                printf("Element pushed (inserted) data : %d\n");
+                printf("Element pushed (inserted) data : %d\n" , stack[top]);
             }
             break;
         case 2: pop();
