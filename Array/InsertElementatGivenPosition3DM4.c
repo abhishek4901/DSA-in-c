@@ -12,9 +12,8 @@ int main()
     scanf("%d", &pos);
     printf("Enter the element to insert: ");
     scanf("%d", &x);
-    for (i = size - 1; i >= pos - 1; i--) // travese the array position
-        arr[i + 1] = arr[i];              // increase the size of array by 1
-        arr[pos - 1] = x;                     // insert the element at given position
+    for (i = pos - 1; i < size ; i--) // travese the array positi
+    arr[pos - 1] = x;                     // insert the element at given position
     printf("Array after insertion: ");
     for (i = 0; i < size; i++)
         printf("%d ", arr[i]);
