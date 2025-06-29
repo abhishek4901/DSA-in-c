@@ -3,7 +3,7 @@
 
 int hashFunction(int key) {
     int m=SIZE;
-    return key % m;
+    return key % m; 
 }   
  
 void insert(int hashTable[], int key) { 
