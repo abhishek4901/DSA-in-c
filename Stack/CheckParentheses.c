@@ -7,44 +7,62 @@
 char stack[MAX];
 int top = -1;
 
+// Push a character onto the stack
 void push(char c) {
     if (top < MAX - 1) {
         stack[++top] = c;
     }
 }
 
+// Pop the top character from the stack
 char pop() {
     if (top >= 0) {
         return stack[top--];
     }
-    return '\0';
+    return '\0'; // Stack is empty
 }
 
+// Function to check matching pairs
+int isMatchingPair(char opening, char closing) {
+    return (opening == '(' && closing == ')') ||
+           (opening == '{' && closing == '}') ||
+           (opening == '[' && closing == ']');
+}
+
+// Function to check if brackets are balanced
 int isBalanced(char *str) {
     for (int i = 0; str[i] != '\0'; i++) {
         char ch = str[i];
-        if (ch == '(') {
+
+        // If it's an opening bracket, push to stack
+        if (ch == '(' || ch == '{' || ch == '[') {
             push(ch);
-        } else if (ch == ')') {
-            if (top == -1) {
-                return 0; // No matching opening bracket
+        }
+        // If it's a closing bracket
+        else if (ch == ')' || ch == '}' || ch == ']') {
+            if (top == -1) return 0; // No opening bracket
+
+            char topChar = pop();
+            if (!isMatchingPair(topChar, ch)) {
+                return 0; // Not a matching pair
             }
-            pop();
         }
     }
-    return top == -1; // If stack is empty, parentheses are balanced
+
+    return (top == -1); // Stack should be empty at the end
 }
 
 int main() {
     char str[100];
 
     printf("Enter a string: ");
-    gets(str);  // Note: gets is unsafe, use fgets in real programs
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0'; // Remove newline
 
     if (isBalanced(str)) {
-        printf("Parentheses are balanced.\n");
+        printf("Brackets are balanced.\n");
     } else {
-        printf("Parentheses are NOT balanced.\n");
+        printf("Brackets are NOT balanced.\n");
     }
 
     return 0;
