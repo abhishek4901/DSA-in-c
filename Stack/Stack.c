@@ -81,9 +81,9 @@ int choice, status, no;
                 return 1;
             }
         int traverse(){
-             int i=0;
+            
              printf("\n dishplay  data");
-             while(i<=top){
+             for(int i =0 ;i<=top; i++){
                  printf("\n %d",stack[i++]);
              }
         }
