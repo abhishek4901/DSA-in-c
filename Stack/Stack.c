@@ -64,7 +64,7 @@ int choice, status, no;
         {
             if (top >= MAX - 1)
                 return 0;
-            else
+            else 
                 return 1;
         }
             
