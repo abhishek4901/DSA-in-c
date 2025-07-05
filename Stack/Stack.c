@@ -9,7 +9,7 @@ int top = -1;
 int stack[MAX];
 int main()
 {
-int choice, status, no;
+int choice;
     while (1)
     {
         printf("\nenter the 1 for  push(insert) data : ");
@@ -21,8 +21,7 @@ int choice, status, no;
         switch (choice)
         {
         case 1:
-            status = push();
-            if (status == 0)
+            if ( push() == 0)
             {
                 printf("Stack overflow but can't data inserted more\n");
             }
@@ -31,8 +30,8 @@ int choice, status, no;
                 printf("Element pushed (inserted) data : %d\n" , stack[top]);
             }
             break;
-        case 2: pop();
-            if (status == 0)
+        case 2: 
+            if (pop() == 0)
             {
                 printf("\n stack is underflow but can't data deleted\n");
             }
@@ -43,9 +42,9 @@ int choice, status, no;
         
             break;
         case 3:
-            status = traverse();
-            if (status ==0){
-                printf("\n  stack is underflow");
+           
+            if ( traverse() ==0){
+                printf("\n  stack is underflow(empty)");
             
             }
             else{
@@ -70,9 +69,7 @@ int choice, status, no;
             
             int push(){
                 int no;
-                int status;
-                status = overflow();
-                if(status == 0)
+                if(overflow() == 0)
                 return 0 ;
                 printf("\n enter a  number :");
                 scanf("%d", &no);
@@ -80,28 +77,31 @@ int choice, status, no;
                 stack[top] = no;
                 return 1;
             }
-        int traverse(){
-            
-             printf("\n dishplay  data");
-             for(int i =0 ;i<=top; i++){
-                 printf("\n %d",stack[i++]);
-             }
-        }
     int underflow(){
         if(top == -1){
             return 0;
         }
         else{
-            top--;
             return 1;
         }
     }
+        int traverse(){
+            if(underflow () == 0 )
+            return 0 ;
+            
+             else 
+             printf("\n dishplay  data");
+             for (int i=0 ;i<=top; i++){
+                 printf("\n %d",stack[i]);
+             }
+              return 1;
+        }
         int pop(){
-            int status;
-            status = underflow();
-            if(status == 0)
+             
+            if(underflow() == 0)
                 return 0;
             else
+             top--;
                 return 1;
            
         }
