@@ -1,49 +1,38 @@
 #include <stdio.h>
-#define Max 100
+#define MAX 100
 
-// Insertion Sort Function
-void InsertionSorting(int arr[Max], int n) {
-    int i, key, j;
-    for (i = 1; i < n; i++) {
-        key = arr[i];      // element to be inserted
-        j = i - 1;
-
-        // Move elements greater than key to one position ahead
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
-            j = j - 1;
-        }
-        arr[j + 1] = key;
-    }
-
-    // Print the sorted array
-    printf("Sorted array: ");
-    for (i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-}
-
-// Main function
 int main() {
-    int arr[Max];
-    int n, i;
+    int arr[MAX], size, i, j, minIndex, temp;
 
-    printf("Enter the number of elements you want to sort: ");
-    scanf("%d", &n);
+    // Input array size and elements
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
 
-    printf("Enter the values: ");
-    for (i = 0; i < n; i++) {
+    printf("Enter elements: ");
+    for (i = 0; i < size; i++) {
         scanf("%d", &arr[i]);
     }
 
-    printf("Original array: ");
-    for (i = 0; i < n; i++) {
+    // ✅ Selection Sort logic
+    for (i = 0; i < size - 1; i++) {
+        minIndex = i;
+        for (j = i + 1; j < size; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        // Swap arr[i] with arr[minIndex]
+        temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+
+    // Print sorted array
+    printf("Array after Selection Sort: ");
+    for (i = 0; i < size; i++) {
         printf("%d ", arr[i]);
     }
-    printf("\n");
-
-    InsertionSorting(arr, n);
 
     return 0;
 }
