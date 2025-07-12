@@ -8,7 +8,7 @@ int main() {
     scanf("%d", &n);
  
     // Declare adjacency matrix  
-    int adjMatrix[n][n];  
+    int adjMatrix[n][n];   
   
     // Fill the matrix
     for (i = 0; i < n; i++) {
