@@ -1,57 +1,61 @@
 #include <stdio.h>
-#define MAX 100
 
-void swap(int* a, int* b) {
-    int t = *a;
-    *a = *b;
-    *b = t;
-}
+// Partition with pivot as first element
+int partition(int arr[], int low, int high) {
+    int pivot = arr[low]; // Use first element as pivot
+    int i = low + 1;
+    int j = high;
 
-int partition(int arr[], int down, int up) {
-    int pivot = arr[up]; // pivot
-    int i = (down - 1);     // Index of smaller element
-
-    for (int j = down; j <= up - 1; j++) {
-        if (arr[j] < pivot) {
+    while (i <= j) {
+        // Find element > pivot from left
+        while (i <= high && arr[i] <= pivot)
             i++;
-            swap(&arr[i], &arr[j]);
+
+        // Find element < pivot from right
+        while (j >= low && arr[j] > pivot)
+            j--;
+
+        // Swap without pointer if i < j
+        if (i < j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
         }
     }
-    swap(&arr[i + 1], &arr[up]);
-    return (i + 1);
+
+    // Place pivot in correct position (again, swap without pointer)
+    int temp = arr[low];
+    arr[low] = arr[j];
+    arr[j] = temp;
+
+    return j; // Return pivot index
 }
 
-void quickSort(int arr[], int down, int up) {
-    if (down < up) {
-        int pi = partition(arr, down, up);
-
-        quickSort(arr, down, pi - 1);
-        quickSort(arr, pi + 1, up);
+// Quick Sort using first element as pivot
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
+        int pi = partition(arr, low, high); // partition index
+        quickSort(arr, low, pi - 1);  // sort left sub-array
+        quickSort(arr, pi + 1, high); // sort right sub-array
     }
 }
 
-void printArray(int arr[], int size) {
-    for (int i = 0; i < size; i++)
-        printf("%d ", arr[i]);
-    printf("\n");
-}
-
+// Main function
 int main() {
-    int arr[MAX];
-    int n;
-    printf("Enter the number of elements you want to sort: ");
-    scanf("%d", &n);
-    printf("Enter %d elements: ", n);
+    int arr[] = {6, 9, 5, 8, 7, 4, 3, 1, 2, 0};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Original array:\n");
     for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+        printf("%d ", arr[i]);
     }
-    int no = sizeof(arr) / sizeof(arr[0]);
-    printf("Original array: ");
-    printArray(arr, n);
 
     quickSort(arr, 0, n - 1);
 
-    printf("Sorted array: ");
-    printArray(arr, n);
+    printf("\nSorted array using Quick Sort (Pivot = First Element):\n");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+
     return 0;
 }
