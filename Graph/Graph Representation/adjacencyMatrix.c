@@ -6,7 +6,7 @@ int main() {
     // Input number of vertices 
     printf("Enter the number of vertices: ");
     scanf("%d", &n);
-
+ 
     // Declare adjacency matrix 
     int adjMatrix[n][n];  
 
