@@ -12,7 +12,7 @@ int main (){
     for(i=0;i<size;i++)    
         printf("%d ",arr[i]);
     for(i=0;i<size;i++){
-        for(j=i+1;j<size;j++){//for(j=0;j<size;j++){ but that increases time complexity
+        for(j=i+1;j<size;j++){
             if(arr[i]>arr[j]){ 
                 temp=arr[i];
                 arr[i]=arr[j];
