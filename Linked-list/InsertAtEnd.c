@@ -1,7 +1,7 @@
 #include<stdio.h>   // Include standard input-output header for printf and scanf
 #include<stdlib.h>  // Include standard library header for malloc and free
 
-// Define the structure of a linked list node
+// Define the structure of a linked list node 
 typedef struct LinkedList {
     int data;                // Data field to store the value of the node
     struct LinkedList* next; // Pointer to the next node in the list
