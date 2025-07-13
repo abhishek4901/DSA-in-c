@@ -59,7 +59,7 @@ void deleteLastNode()
     if (head == NULL) // Check if the list is empty
     {
         printf("\nList is already empty.\n"); // Print a message if the list is empty
-        return; // Exit the function
+        
     }
     if (head->next == NULL) // Check if there is only one node in the list
     {
@@ -67,7 +67,7 @@ void deleteLastNode()
         head = NULL; // Set the head pointer to NULL
         tail = NULL; // Set the tail pointer to NULL
         printf("\nAfter deleting last node, list is now empty.\n"); // Print a message
-        return; // Exit the function
+      
     }
 
     temp = head; // Start traversal from the head of the list
