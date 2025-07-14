@@ -6,7 +6,7 @@ int hashFunction(int key) {
     return key % m; 
 }   
  
-void insert(int hashTable[], int key) { 
+void insert(int hashTable[], int key) {  
     int index = hashFunction(key);
     //linear probing if index collide
     int originalIndex = index;
