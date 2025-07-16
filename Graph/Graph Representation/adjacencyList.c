@@ -7,7 +7,7 @@ int main() {
     printf("Enter number of vertices: ");
     scanf("%d", &vertices);
 
-    printf("Enter number of edges: ");
+    printf("Enter number of edges: "); 
     scanf("%d", &edges);
 
     // Create an array of pointers to store adjacency list
