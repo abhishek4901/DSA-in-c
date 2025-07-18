@@ -7,7 +7,7 @@ int linearSearch(int arr[], int n, int value) {
             return i+1; 
         }
     }
-    return -1;
+    return -1; 
 }
 int main() {
     int i, n, value, arr[MAX];
