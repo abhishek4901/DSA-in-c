@@ -5,7 +5,7 @@
 typedef struct linkedlist
 {
     int data;                // Data part of the node
-    struct linkedlist *next;  // Pointer to next node 
+    struct linkedlist *next;  // Pointer to next node  
 } list;
 
 // Declare global pointers for linked list
