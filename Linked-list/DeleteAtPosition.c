@@ -3,7 +3,7 @@
 
 // Node structure definition
 typedef struct linkedlist 
-{
+{ 
     int data;                // Data part of the node
     struct linkedlist *next;  // Pointer to next node  
 } list;
