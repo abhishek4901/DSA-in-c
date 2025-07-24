@@ -2,7 +2,7 @@
 #include <stdlib.h>  // Include standard library header for malloc and free
 
 // Node structure definition
-typedef struct linkedlist
+typedef struct linkedlist 
 {
     int data;                // Data part of the node
     struct linkedlist *next;  // Pointer to next node  
