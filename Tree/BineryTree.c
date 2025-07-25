@@ -10,7 +10,7 @@ typedef struct Binerysearcchtree
 
 BST *root = NULL;
 
-// Function prototypes
+// Function prototypes 
 int insert(int no);
 int deleteNode(int no);
 void preorder(BST *node);
