@@ -7,7 +7,7 @@ typedef struct Binerysearcchtree
     struct Binerysearcchtree *left; 
     struct Binerysearcchtree *right; 
 } BST;
-
+ 
 BST *root = NULL; 
 
 // Function prototypes 
