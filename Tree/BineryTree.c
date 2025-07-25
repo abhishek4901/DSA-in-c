@@ -8,7 +8,7 @@ typedef struct Binerysearcchtree
     struct Binerysearcchtree *right; 
 } BST;
 
-BST *root = NULL;
+BST *root = NULL; 
 
 // Function prototypes 
 int insert(int no);
