@@ -5,7 +5,7 @@ typedef struct Binerysearcchtree
 {
     int data;
     struct Binerysearcchtree *left;
-    struct Binerysearcchtree *right;
+    struct Binerysearcchtree *right; 
 } BST;
 
 BST *root = NULL;
