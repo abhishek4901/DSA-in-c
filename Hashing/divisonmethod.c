@@ -2,7 +2,7 @@
 #define SIZE 10  
 
 int hashFunction(int key) {
-    int m=SIZE;  
+    int m=SIZE;   
     return key % m;   
 }      
  
