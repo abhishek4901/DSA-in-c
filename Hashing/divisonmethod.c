@@ -10,7 +10,7 @@ void insert(int hashTable[], int key) {
     int index = hashFunction(key);
     //linear probing if index collide
     int originalIndex = index;
-    while (hashTable[index] != -1) {
+    while (hashTable[index] != -1) { 
         index = (index + 1) % SIZE;
         if (index == originalIndex) {
             printf("Hash table is full!\n");
