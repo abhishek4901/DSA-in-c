@@ -9,7 +9,7 @@
           scanf("%d", &arr[i]);
       }
       for(i=0;i<n;i++) {
-          for(j=n;j>i;j--) {
+          for(j=n-1;j>i;j--) {
           if(arr[i]==0 && arr[j]!= 0) {
                  temp=arr[i];
                   arr[i]=arr[j];
