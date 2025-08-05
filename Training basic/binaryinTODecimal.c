@@ -6,12 +6,11 @@ int main() {
     scanf("%d", &b);
 
     while (b > 0) {
-        int last_digit = b % 10;
-        d = d + last_digit * p;
+        d = d + p * (b % 10);
         p = p * 2;
         b = b / 10;
     }
 
-    printf("Decimal : %d\n", d);
+    printf("Decimal : %d\n", d); 
     return 0;
 }
