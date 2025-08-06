@@ -2,7 +2,7 @@
 #define SIZE 10
 int main() {
     int i, n;
-    printf("Enter number of elements: ");
+    printf("Enter size of elements: ");
     scanf("%d", &n);
     int arr[n];
     printf("Enter the sorted elements: ");
