@@ -48,7 +48,7 @@ int main() {
 
     // Print merged array
     printf("Merged sorted array (with duplicates): ");
-    for(i = 0; i < k; i++) {
+    for(i = 0; i < k; i++) {//remove dublicates then actual space have k
         printf("%d ", Arr3[i]);
     }
     printf("\n");
