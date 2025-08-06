@@ -37,13 +37,13 @@ int main() {
     }
 
     // Remaining elements from arr1
-    for(; i < n; i++) {
-        Arr3[k++] = arr1[i];
+    while( i < n) {
+        Arr3[k++] = arr1[i++];
     }
 
     // Remaining elements from arr2
-    for(; j < m; j++) {
-        Arr3[k++] = arr2[j];
+    while( j < m) {
+        Arr3[k++] = arr2[j++];
     }
 
     // Print merged array
