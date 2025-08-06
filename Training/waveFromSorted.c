@@ -20,11 +20,10 @@ int main() {
     }
 
     
-    for (size_t i = 0; i < 5; i++)
+    for (size_t i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
-    printf("\n");
 
     return 0;
 }
