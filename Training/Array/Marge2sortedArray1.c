@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int main() {
     int i, j, k = 0, m, n;
 
@@ -26,10 +27,8 @@ int main() {
 
     int Arr3[m + n];
 
-    // Merge arrays
-    i = 0;
-    j = 0;
-    while(i < n && j < m) {
+    // ✅ Using for loop for merging
+    for(i = 0, j = 0; i < n && j < m;) {
         if(arr1[i] < arr2[j]) {
             Arr3[k++] = arr1[i++];
         } else {
@@ -37,20 +36,22 @@ int main() {
         }
     }
 
-    // Add remaining elements
-    while(i < n) {
-        Arr3[k++] = arr1[i++];
+    // Remaining elements from arr1
+    for(; i < n; i++) {
+        Arr3[k++] = arr1[i];
     }
 
-    while(j < m) {
-        Arr3[k++] = arr2[j++];
+    // Remaining elements from arr2
+    for(; j < m; j++) {
+        Arr3[k++] = arr2[j];
     }
 
     // Print merged array
-    printf("Merged sorted array: ");
-    for(i = 0; i < m + n; i++) {// no dublicate remove then all elements store 
+    printf("Merged sorted array (with duplicates): ");
+    for(i = 0; i < k; i++) {
         printf("%d ", Arr3[i]);
     }
+    printf("\n");
 
     return 0;
 }
