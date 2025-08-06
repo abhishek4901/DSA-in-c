@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 #define SIZE 100 // Large enough size for merged array
 
 int main() {
