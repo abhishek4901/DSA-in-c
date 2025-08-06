@@ -24,8 +24,6 @@ int main() {
     }
 
     int Arr3[n + m];
-
-    // ✅ Merge while removing duplicates (fixed for-loop)
     for(i = 0, j = 0; i < n && j < m;) {
         if(arr1[i] < arr2[j]) {
             Arr3[k++] = arr1[i++];
