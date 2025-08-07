@@ -1,7 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    char s[50] = "i love my india";
+    // char s[50] = "i love my india";
+    char s[50];
+    printf("Enter a string: ");
+    fgets(s, sizeof(s), stdin); // Read string input
     int i, pre = 0, start, end, temp;
 
     for (i = 0;; i++) {
