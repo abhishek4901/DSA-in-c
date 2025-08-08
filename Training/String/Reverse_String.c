@@ -15,7 +15,7 @@ int main() {
         } 
         length++;     
     }
-
+ 
     // Step 2: Reverse the whole string
     int start = 0, end = length - 1;
     while (start < end) {
