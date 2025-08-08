@@ -13,7 +13,7 @@ int main() {
             s[length] = '\0';
             break;
         } 
-        length++;  
+        length++;   
     }
 
     // Step 2: Reverse the whole string
