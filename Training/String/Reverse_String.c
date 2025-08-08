@@ -12,7 +12,7 @@ int main() {
         if (s[length] == '\n') {
             s[length] = '\0';
             break;
-        }
+        } 
         length++; 
     }
 
