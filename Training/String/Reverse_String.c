@@ -11,7 +11,7 @@ int main() {
     while (s[length] != '\0') {
         if (s[length] == '\n') {
             s[length] = '\0';
-            break;
+            break; 
         } 
         length++;   
     }
