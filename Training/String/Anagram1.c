@@ -21,13 +21,13 @@ int main() {
     }
 
     // Count frequency of each character (case-insensitive)
-    for (int i = 0; s1[i] != '\0'; i++) {
+    for (int i = 0; s1[i] != '\0'; i++) {// store vlaue 
         char ch = toupper(s1[i]);
         z[ch - 65]++;
     }
 
-    for (int i = 0; s2[i] != '\0'; i++) {
-        char ch = toupper(s2[i]);
+    for (int i = 0; s2[i] != '\0'; i++) {// stored value is same or match then release space and array ki zero
+         char ch = toupper(s2[i]);
         z[ch - 65]--;
     }
 
