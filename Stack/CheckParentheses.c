@@ -30,7 +30,7 @@ int isMatchingPair(char opening, char closing) {
 }
 
 // Function to check if brackets are balanced
-int isBalanced(char *str) {
+int checkBalanced(char *str) {
     for (int i = 0; str[i] != '\0'; i++) {
         char ch = str[i];
 
@@ -59,7 +59,7 @@ int main() {
     fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = '\0'; // Remove newline
 
-    if (isBalanced(str)) {
+    if (checkBalanced(str)) {
         printf("Brackets are balanced.\n");
     } else {
         printf("Brackets are NOT balanced.\n");
