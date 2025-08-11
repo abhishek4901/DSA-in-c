@@ -11,7 +11,7 @@ int isValid(char *str) {
 
         // Push opening brackets
         if (ch == '(' || ch == '{' || ch == '[') {
-            stack[++top] = ch; // pre-increment: move top to next index, then store
+            stack[++top] = ch; // pre-increment: becasue initial value is -1
         }
         // Check and pop closing brackets
         else if (ch == ')' || ch == '}' || ch == ']') {
