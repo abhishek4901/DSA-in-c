@@ -8,7 +8,7 @@ int main() {
  
     printf("Enter first string: ");
     scanf("%s", s1);
-    printf("Enter second string: ");
+    printf("Enter second string: "); 
     scanf("%s", s2);
 
     // Check length first
