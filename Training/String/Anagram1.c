@@ -3,7 +3,7 @@
 #include <ctype.h>
 
 int main() {
-    char s1[20], s2[20];
+    char s1[20], s2[20]; 
     int z[26] = {0};  
  
     printf("Enter first string: ");
