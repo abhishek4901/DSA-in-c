@@ -4,7 +4,7 @@
 
 int main() {
     char s1[20], s2[20];
-    int z[26] = {0}; 
+    int z[26] = {0};  
  
     printf("Enter first string: ");
     scanf("%s", s1);
