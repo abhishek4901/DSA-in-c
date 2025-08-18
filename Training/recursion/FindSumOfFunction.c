@@ -1,17 +1,22 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int sum(int n) {
-    if (n == 0)
-        return 0;
-    else
-        return n + sum(n - 1);
+int sumofSeries(int n) {
+    float x;
+    if (n == 1)
+        return 1;
+    else {
+        x=n;
+        if (n % 2 == 0)
+            return (sumofSeries(n - 1) - 1 / x);
+        else
+            return (sumofSeries(n - 1) + 1 / x);
+    }
 }
 
-int main(){
+int main() {
     int n;
-    printf("Enter a positive integer: ");
+    printf(" enter the number like this 1-1/2+1/3-1/4+...1/n ");
     scanf("%d", &n);
-    printf("Sum of first %d natural numbers is %d\n", n, sum(n));
+    printf("Sum of series up to %d terms is: %d\n", n, sumofSeries(n));
     return 0;
 }
- 
