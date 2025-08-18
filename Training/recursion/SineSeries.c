@@ -19,7 +19,7 @@ float  mypower(float base, int exp) {
 
 // Recursive function to calculate the sine series
 float sineSeries(float x, int n) {
-   
+    
     if (n == 0) {
         return x;
     }
