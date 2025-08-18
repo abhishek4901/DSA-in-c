@@ -3,12 +3,12 @@
 #include <ctype.h>
 
 int main() {
-    char s1[20], s2[20];
-    int z[26] = {0};
-
+    char s1[20], s2[20]; 
+    int z[26] = {0};  
+ 
     printf("Enter first string: ");
     scanf("%s", s1);
-    printf("Enter second string: ");
+    printf("Enter second string: "); 
     scanf("%s", s2);
 
     // Check length first
