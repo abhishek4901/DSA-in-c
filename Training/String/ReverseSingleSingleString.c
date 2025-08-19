@@ -1,27 +1,37 @@
 #include <stdio.h>
 
 int main() {
-    // char s[50] = "i love my india";
     char s[50];
     printf("Enter a string: ");
     fgets(s, sizeof(s), stdin); // Read string input with spaces
-    int i, pre = 0, start, end, temp;
 
-    for (i = 0;; i++) {
-        // Check for space or null terminator to mark word boundary
+    int i, pre = 0, start, end;
+    char temp;
+
+    // Step 1: Remove newline if present
+    for (i = 0; s[i] != '\0'; i++) {
+        if (s[i] == '\n') {
+            s[i] = '\0';
+            break;
+        }
+    }
+
+    // Step 2: Reverse each word
+    for (i = 0; s[i] != '\0'; i++) {
         if (s[i] == ' ' || s[i] == '\0') {
-            // The word is from pre to i-1
             start = pre;
             end = i - 1;
 
-            // Reverse characters in this word
-            while (start < end) {
+            // Reverse current word
+            while (start < end)
+            {
                 temp = s[start];
                 s[start] = s[end];
                 s[end] = temp;
                 start++;
                 end--;
             }
+                
 
             if (s[i] == '\0') // End of string
                 break;
