@@ -8,23 +8,20 @@ int main() {
     fgets(s, sizeof(s), stdin);
 
     // Step 1: Remove newline if present
-    while (s[length] != '\0') {
-        if (s[length] == '\n') {
-            s[length] = '\0';
-            break; 
-        } 
-        length++;     
+     for ( int i = 0; s[i] != '\0'; i++) {
+        if (s[i] == '\n') {
+            s[i] = '\0';
+            break;
+        }
+        length++;
     }
- 
     // Step 2: Reverse the whole string
-    int start = 0, end = length - 1;
-    while (start < end) {
-        char temp = s[start];
-        s[start] = s[end];
-        s[end] = temp;
-        start++;
-        end--;
-    }
+  int start, end;
+for (start = 0, end = length - 1; start < end; start++, end--) {
+    char temp = s[start];
+    s[start] = s[end];
+    s[end] = temp;
+}
 
     // Step 3: Reverse each word in the reversed string
     start = 0;
