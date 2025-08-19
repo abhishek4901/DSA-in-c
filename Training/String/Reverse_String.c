@@ -16,12 +16,15 @@ int main() {
         length++;
     }
     // Step 2: Reverse the whole string
-  int start, end;
-for (start = 0, end = length - 1; start < end; start++, end--) {
-    char temp = s[start];
-    s[start] = s[end];
-    s[end] = temp;
-}
+   int start = 0, end = length - 1;
+    while (start < end) {
+        char temp = s[start];
+        s[start] = s[end];
+        s[end] = temp;
+        start++;
+        end--;
+    }  
+
 
     // Step 3: Reverse each word in the reversed string
     start = 0;
@@ -36,7 +39,7 @@ for (start = 0, end = length - 1; start < end; start++, end--) {
                 start++;
                 end--;
             }
-            start = i + 1;
+            start = i + 1; // move to next word
         }
     }
 
