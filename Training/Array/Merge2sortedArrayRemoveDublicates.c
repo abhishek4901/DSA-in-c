@@ -42,7 +42,6 @@ int main() {
     while(j < m) {
         Arr3[k++] = arr2[j++];
     }
-
     // Print final array
     printf("Merged sorted array without duplicates: ");
     for(i = 0; i < k; i++) {
