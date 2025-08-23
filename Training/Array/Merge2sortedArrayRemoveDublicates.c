@@ -7,7 +7,7 @@ int main() {
     // Input sizes
     printf("Enter the size of Array 1: ");
     scanf("%d", &n);
-    int arr1[n];
+    int arr1[n]; 
 
     printf("Enter the elements of first array (sorted): ");
     for(i = 0; i < n; i++) {
