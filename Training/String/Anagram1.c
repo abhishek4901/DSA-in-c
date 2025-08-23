@@ -13,7 +13,7 @@ int main() {
 
     // Check length first
     int l1 = strlen(s1);
-    int l2 = strlen(s2); 
+    int l2 = strlen(s2);  
 
     if (l1 != l2) {
         printf("Not Anagram");
