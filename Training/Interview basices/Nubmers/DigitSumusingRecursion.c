@@ -1,19 +1,15 @@
 #include <stdio.h>
+int main() {
+    int num, sum = 0, temp, rem;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    temp = num;
+    while (temp>0) {
+        rem = temp % 10;
+        sum = sum+rem;
+        temp = temp/10;
+    }
 
-int sumOfDigits(int n){
-    if(n == 0){return 0;}
-else  
-
-    return (n % 10) + sumOfDigits(n / 10);
-}
-
-int main(){
-    int n ;
-
-printf("enter the number");
-scanf("%d",&n);
-sumOfDigits(n);
-    printf("%d", sumOfDigits(n));
-
+ printf("%d ",sum);   
     return 0;
 }

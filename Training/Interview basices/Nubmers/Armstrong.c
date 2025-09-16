@@ -10,7 +10,7 @@ int main() {
         temp = temp/10;
     }
 if(num==sum)    
- printf("Number %d is armstrong  number ", num);    
+ printf("Number %d is armstrong  number ", num);   //125 = 1^3 + 2^3 + 5^3 that is armstrong number
  else    
  printf("Number %d is not  armstrong  number ", num);    
     return 0;
