@@ -24,16 +24,12 @@
 int main() {
     char str[100];   // string storage
 
-    int length = 0;
+    int length = -1;
     printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);   // read input with spaces
 
     // remove newline if present
     for ( int i = 0; str[i] != '\0'; i++) {
-        if (str[i] == '\n') {
-            str[i] = '\0';
-            break;
-        }
         length++;
     }
 

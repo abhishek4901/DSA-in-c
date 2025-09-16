@@ -1,57 +1,48 @@
 #include <stdio.h>
 
 int main() {
-    int i, j, k = 0, m, n;
+    int n1, n2, i, j, k;
 
-    // Input size of Array1
-    printf("Enter the size of Array1: ");
-    scanf("%d", &n);
-    int arr1[n];
-
-    // Input elements of Array1
-    printf("Enter the elements of first array (sorted): ");
-    for(i = 0; i < n; i++) {
+    printf("Enter size of first sorted array: ");
+    scanf("%d", &n1);
+    int arr1[n1];
+    printf("Enter elements of first array (sorted): ");
+    for (i = 0; i < n1; i++) {
         scanf("%d", &arr1[i]);
     }
 
-    // Input size of Array2
-    printf("Enter the size of Array2: ");
-    scanf("%d", &m);
-    int arr2[m];
-
-    // Input elements of Array2
-    printf("Enter the elements of second array (sorted): ");
-    for(i = 0; i < m; i++) {
+    printf("Enter size of second sorted array: ");
+    scanf("%d", &n2);
+    int arr2[n2];
+    printf("Enter elements of second array (sorted): ");
+    for (i = 0; i < n2; i++) {
         scanf("%d", &arr2[i]);
     }
 
-    int Arr3[m + n];
+    int merged[n1 + n2];
+    i = 0; j = 0; k = 0;
 
-    // ✅ Using for loop for merging
-    for(i = 0, j = 0; i < n && j < m;) {
-        if(arr1[i] < arr2[j]) {
-            Arr3[k++] = arr1[i++];
+    // merge arrays
+    while (i < n1 && j < n2) {
+        if (arr1[i] < arr2[j]) {
+            merged[k++] = arr1[i++];
         } else {
-            Arr3[k++] = arr2[j++];
+            merged[k++] = arr2[j++];
         }
     }
 
-    // Remaining elements from arr1
-    while( i < n) {
-        Arr3[k++] = arr1[i++];
+    // copy remaining elements
+    while (i < n1) {
+        merged[k++] = arr1[i++];
+    }
+    while (j < n2) {
+        merged[k++] = arr2[j++];
     }
 
-    // Remaining elements from arr2
-    while( j < m) {
-        Arr3[k++] = arr2[j++];
+    printf("Merged sorted array: ");
+    for (i = 0; i < n1 + n2; i++) {
+        printf("%d ", merged[i]);
     }
-
-    // Print merged array
-    printf("Merged sorted array (with duplicates): ");
-    for(i = 0; i < k; i++) {//remove dublicates then actual space have k
-        printf("%d ", Arr3[i]);
-    }
-    printf("\n");
 
     return 0;
 }
